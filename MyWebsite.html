@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I'm Aman Kurani</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            padding: 60px 0 40px;
+            text-align: left;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .header .subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            font-weight: 400;
+            line-height: 1.5;
+            max-width: 600px;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 40px;
+            line-height: 1.3;
+        }
+
+        /* Experience Items */
+        .experience-item {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+        }
+
+        .experience-item:not(:last-child) {
+            border-bottom: 1px solid #eee;
+        }
+
+        .company-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .date-range {
+            font-size: 0.95rem;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+        }
+
+        .project-item:not(:last-child) {
+            border-bottom: 1px solid #eee;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .project-date {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 12px;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 12px;
+        }
+
+        .skill-list {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Education */
+        .education-item {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .degree {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .school {
+            font-size: 1.1rem;
+            color: #007bff;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .education-details {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+            padding: 60px 0;
+            background: #f8f9fa;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .contact h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+
+            .header .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .section {
+                margin-bottom: 60px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Subtle animations */
+        .experience-item,
+        .project-item,
+        .skill-category,
+        .education-item {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .experience-item:hover,
+        .project-item:hover,
+        .skill-category:hover,
+        .education-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Hi, I'm Aman Kurani</h1>
+            <p class="subtitle">Business & Data Analyst with a passion for transforming data into actionable insights, building analytical solutions, and exploring AI technologies to drive business growth.</p>
+        </header>
+
+        <!-- Experience Section -->
+        <section class="section">
+            <h2 class="section-title">My professional journey and contributions to data-driven solutions</h2>
+            
+            <div class="experience-item">
+                <div class="company-name">Mercor Intelligence</div>
+                <div class="job-title">Math & Data Analyst Humanizer</div>
+                <div class="date-range">January 2025 – Present</div>
+                <div class="description">Fine-tuned LLMs for data analysis, improving accuracy by 25% through data processing and validation on OpenAI Feather platform. Operated autonomously in a fast-paced, cross-functional team, providing actionable insights that directly influenced AI product development and human-in-the-loop training.</div>
+            </div>
+
+            <div class="experience-item">
+                <div class="company-name">Crunch Fitness</div>
+                <div class="job-title">Personal Trainer</div>
+                <div class="date-range">July 2024 – July 2025</div>
+                <div class="description">Used data-driven fitness tracking to develop 50+ customized workout plans, analyzing client progress using Excel and performance metrics to improve results. Maintained 90% client retention rate through strong communication skills and goal-oriented planning.</div>
+            </div>
+
+            <div class="experience-item">
+                <div class="company-name">GAO Group</div>
+                <div class="job-title">Digital Marketing Intern</div>
+                <div class="date-range">May 2023 – July 2023</div>
+                <div class="description">Used Google Analytics to track user flow, bounce rates, and session duration across key landing pages. Conducted A/B testing on article formats and optimized page structure, resulting in a 15% improvement in engagement and a 20% increase in page views. Collaborated with design and content teams to align articles with audience behavior insights.</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section">
+            <h2 class="section-title">Analytical projects and data science initiatives I've developed</h2>
+            
+            <div class="project-item">
+                <div class="project-title">Cyclistic Bike-Share Analysis</div>
+                <div class="project-date">January 2025</div>
+                <div class="project-description">Analyzed 1 million+ bike trip records from Cyclistic's historical dataset using Excel (pivot tables, VLOOKUP, data visualization) and SQL (JOINs, GROUP BY, aggregate functions). Used Python (pandas, matplotlib) to clean and visualize trends, including peak ride hours and popular locations. Recommended targeted strategies to convert casual users, projected to increase membership by 10%. Presented findings via Power BI dashboard to a class panel simulating Cyclistic's marketing team.</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">AdventureWorks Power BI Dashboard</div>
+                <div class="project-date">June 2025</div>
+                <div class="project-description">Connected and transformed data in Power Query using indexing, conditional columns, grouping, merging, and appending. Built a relational data model using a snowflake schema, connecting tables via primary and foreign keys. Developed DAX measures for key calculations using SWITCH, CALCULATE, ALL, RELATED, FILTER, and Time Intelligence functions. Designed an interactive KPI dashboard featuring line charts, bar & donut charts, KPI cards, and advanced filtering capabilities.</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Client Performance Analytics System</div>
+                <div class="project-date">Ongoing</div>
+                <div class="project-description">Developed a comprehensive fitness tracking and analysis system using Excel and performance metrics to monitor 50+ client progress. Implemented data-driven decision making for workout plan optimization, resulting in measurable improvement in client results and maintaining industry-leading retention rates.</div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section">
+            <h2 class="section-title">My technical expertise and analytical competencies</h2>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Data Analysis & Visualization</h3>
+                    <div class="skill-list">SQL (Advanced), Power BI, Excel (Expert), Python (pandas, matplotlib), Tableau</div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Business Intelligence</h3>
+                    <div class="skill-list">DAX, Power Query, Data Modeling, KPI Development, Dashboard Design</div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Analytics & Research</h3>
+                    <div class="skill-list">Statistical Analysis, A/B Testing, Google Analytics, Performance Metrics, Market Research</div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Technology & Tools</h3>
+                    <div class="skill-list">Microsoft Office Suite, OpenAI Platform, Database Management, Cloud Analytics</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section">
+            <h2 class="section-title">My academic background and achievements</h2>
+            
+            <div class="education-item">
+                <div class="degree">Bachelor of Science in Business Administration</div>
+                <div class="school">University of North Carolina at Charlotte</div>
+                <div class="date-range">2022 - 2026</div>
+                <div class="education-details">
+                    Major in Business Analytics & Management Information Systems; Minor in Public Health<br>
+                    Dean's List 2022-2025, Chancellor's List: Spring 2023 • Cumulative GPA: 3.70/4.0
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">Professional Certifications</div>
+                <div class="school">Industry Recognition</div>
+                <div class="education-details">
+                    Google Data Analytics Professional Certificate<br>
+                    Power BI Certificate<br>
+                    NASM Certified Personal Trainer<br>
+                    NASM Certified Nutrition Coach
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2>Let's connect and discuss how we can collaborate</h2>
+            <p>Feel free to reach out if you're interested in my work or want to discuss potential opportunities.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:amankurani13@gmail.com" class="contact-link">amankurani13@gmail.com</a>
+                <a href="tel:+17044915658" class="contact-link">+1 704-491-5658</a>
+                <a href="#" class="contact-link">LinkedIn Profile</a>
+                <a href="#" class="contact-link">Charlotte, NC</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Add smooth scroll behavior and subtle interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add fade-in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all main elements
+            document.querySelectorAll('.experience-item, .project-item, .skill-category, .education-item').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+
+            // Add click tracking for contact links
+            document.querySelectorAll('.contact-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.href === '#') {
+                        e.preventDefault();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
