@@ -1,3 +1,6 @@
+https://aman-kurani.netlify.app/
+
+
 🌐 Aman Kurani — Personal Website
 Welcome to my personal website! This space serves as a digital portfolio where I showcase who I am, what I do, and what I’m passionate about. From career highlights and current projects to ways to get in touch, this site brings together my professional journey and personal interests.
 
